@@ -1,0 +1,44 @@
+#!/usr/bin/env ruby
+#^syntax detection
+
+site 'http://community.opscode.com/api/v1'
+
+cookbook 'system',
+   :git => 'https://github.com/flaccid/cookbooks',
+   :path => 'cookbooks/system',
+   :ref => 'master'
+
+cookbook 'rightscale',
+   :git => 'https://github.com/flaccid/cookbooks',
+   :path => 'cookbooks/rightscale',
+   :ref => 'master'
+
+cookbook 'resolver',
+   :git => 'https://github.com/flaccid/cookbooks',
+   :path => 'cookbooks/resolver',
+   :ref => 'master'
+      
+cookbook 'cron',
+  :git => 'https://github.com/opscode-cookbooks/cron',
+  :ref => 'master'
+
+cookbook 'ntp',
+  :git => 'https://github.com/opscode-cookbooks/ntp',
+  :ref => 'master'
+   
+cookbook 'sudo',
+  :git => 'https://github.com/opscode-cookbooks/sudo',
+  :ref => 'master'
+
+# currently using flaccid's fork until https://github.com/coderanger/chef-collectd/pull/4 is processed
+cookbook 'collectd',
+  :git => 'https://github.com/flaccid/chef-collectd',
+  :ref => 'master'
+
+cookbook 'collectd_plugins',
+  :git => 'https://github.com/coderanger/chef-collectd_plugins',
+  :ref => 'master'
+  
+cookbook 'rsyslog',
+   :git => 'https://github.com/opscode-cookbooks/rsyslog',
+   :ref => 'master'
